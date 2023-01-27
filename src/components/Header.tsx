@@ -38,7 +38,7 @@ function Header({}: Props) {
         transition={{ duration: 1 }}
       >
         <SocialIcon
-          classname="cursor-pointer"
+          className="cursor-pointer"
           network="email"
           fgColor="gray"
           bgColor="transparent"
