@@ -7,7 +7,7 @@ type Props = {};
 
 function Header({}: Props) {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header className="sticky top-0 z-20 mx-auto flex max-w-7xl items-start justify-between p-5 xl:items-center">
       <motion.div
         className="flex flex-row items-center"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -32,7 +32,7 @@ function Header({}: Props) {
       </motion.div>
 
       <motion.div
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        className="flex cursor-pointer flex-row items-center text-gray-300"
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -43,7 +43,7 @@ function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="hidden text-sm uppercase text-gray-400 md:inline-flex">
           Get in Touch
         </p>
       </motion.div>
