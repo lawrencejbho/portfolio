@@ -33,7 +33,7 @@ function Contact({}: Props) {
         <div className="space-y-10">
           <div className="flex items-center space-x-5">
             <PhoneIcon className="h-7 w-7 animate-pulse text-[#f7AB0A]/50" />
-            <p className="text-2xl">+12345678</p>
+            <p className="text-2xl">+1 510 847 7378</p>
           </div>
           <div className="flex items-center space-x-5">
             <EnvelopeIcon className="h-7 w-7 animate-pulse text-[#f7AB0A]/50" />

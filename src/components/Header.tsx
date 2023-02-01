@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 
@@ -30,7 +31,6 @@ function Header({}: Props) {
           bgColor="transparent"
         />
       </motion.div>
-
       <motion.div
         className="flex cursor-pointer flex-row items-center text-gray-300"
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
@@ -43,9 +43,11 @@ function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="hidden text-sm uppercase text-gray-400 md:inline-flex">
-          Get in Touch
-        </p>
+        <a href="#contact">
+          <div className="hidden text-sm uppercase text-gray-400 md:inline-flex">
+            Get in Touch
+          </div>
+        </a>
       </motion.div>
     </header>
   );
