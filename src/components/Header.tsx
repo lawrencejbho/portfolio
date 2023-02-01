@@ -42,6 +42,7 @@ function Header({}: Props) {
           network="email"
           fgColor="gray"
           bgColor="transparent"
+          url="/#contact"
         />
         <a href="#contact">
           <div className="hidden text-sm uppercase text-gray-400 md:inline-flex">
