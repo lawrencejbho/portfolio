@@ -14,7 +14,7 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 
-import Logo from "../../public/LJH.svg";
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   pageInfo: PageInfo;
@@ -37,11 +37,11 @@ export default function Home({
         <Header socials={socials} />
 
         <section id="hero" className="snap-start">
-          <Hero />
+          <Hero pageInfo={pageInfo} />
         </section>
 
         <section id="about" className="snap-center">
-          <About />
+          <About pageInfo={pageInfo} />
         </section>
 
         <section id="skills" className="snap-start">
@@ -59,11 +59,9 @@ export default function Home({
         <a href="#hero">
           <footer className="sticky bottom-5 w-full cursor-pointer">
             <div className="flex items-center justify-center">
-              <Image
-                src={Logo}
-                className="h-10 w-10 cursor-pointer rounded-full brightness-75 filter hover:brightness-100"
-                alt="logo"
-              />
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#4682B4]">
+                <HomeIcon className="w-17 h-7 border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
+              </div>
             </div>
           </footer>
         </a>

@@ -2,17 +2,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { PageInfo } from "../../typings";
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 
 import Profile from "../../public/profile.jpg";
+import { urlFor } from "../../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function Hero({}: Props) {
+function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: ["Hi, my name is Lawrence", "coffee enthusiast"],
+    words: [`Hi, my name is ${pageInfo[0].name}`, "coffee enthusiast"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -21,16 +25,19 @@ function Hero({}: Props) {
       {/* <BackgroundCircles /> */}
       <Image
         className="relative mx-auto h-40 w-40 rounded-full object-cover"
-        src={Profile}
+        src={urlFor(pageInfo[0]?.heroImage).url()}
         alt="profile-image"
+        width="200"
+        height="200"
       />
+
       <div className="z-20">
         <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">
-          Software Engineer
+          {pageInfo[0].role}
         </h2>
         <h1 className="px-10 text-5xl font-semibold lg:text-6xl">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#4682B4" />
         </h1>
 
         <div className="pt-5">
