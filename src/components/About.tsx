@@ -37,7 +37,7 @@ function About({ pageInfo }: Props) {
 
       <motion.div
         initial={{ opacity: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="space-y-10 px-0 md:px-10"

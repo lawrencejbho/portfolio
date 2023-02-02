@@ -24,7 +24,7 @@ function Hero({ pageInfo }: Props) {
     <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
       {/* <BackgroundCircles /> */}
       <Image
-        className="relative mx-auto h-40 w-40 rounded-full object-cover"
+        className="relative mx-auto h-40 w-40 rounded-full object-cover "
         src={urlFor(pageInfo[0]?.heroImage).url()}
         alt="profile-image"
         width="200"
@@ -36,7 +36,7 @@ function Hero({ pageInfo }: Props) {
           {pageInfo[0].role}
         </h2>
         <h1 className="px-10 text-5xl font-semibold lg:text-6xl">
-          <span className="mr-3">{text}</span>
+          <span className="mr-3 text-gray-800">{text}</span>
           <Cursor cursorColor="#4682B4" />
         </h1>
 

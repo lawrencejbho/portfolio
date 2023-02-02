@@ -27,20 +27,22 @@ function Contact({}: Props) {
 
       <div className="flex flex-col space-y-10">
         <h4 className="text-center text-4xl font-semibold">
-          <span className="underline decoration-[#F7AB0A]/50">Lets Talk</span>
+          <span className="text-gray-800 underline decoration-[#4682B4]/80">
+            Lets talk
+          </span>
         </h4>
 
         <div className="space-y-10">
           <div className="flex items-center space-x-5">
-            <PhoneIcon className="h-7 w-7 animate-pulse text-[#f7AB0A]/50" />
+            <PhoneIcon className="h-7 w-7  text-[#4682B4]/90" />
             <p className="text-2xl">+1 510 847 7378</p>
           </div>
           <div className="flex items-center space-x-5">
-            <EnvelopeIcon className="h-7 w-7 animate-pulse text-[#f7AB0A]/50" />
+            <EnvelopeIcon className="h-7 w-7 text-[#4682B4]/90" />
             <p className="text-2xl">lawrence.jb.ho@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5">
-            <MapPinIcon className="h-7 w-7 animate-pulse text-[#f7AB0A]/50" />
+            <MapPinIcon className="h-7 w-7  text-[#4682B4]/90" />
             <p className="text-2xl">San Francisco, CA</p>
           </div>
         </div>
@@ -77,7 +79,7 @@ function Contact({}: Props) {
           />
           <button
             type="submit"
-            className="py-50 rounded-md bg-[#f7ab0a] px-10 text-lg font-bold text-black"
+            className="py-50 rounded-md bg-[#4682B4]/90 px-10 text-lg font-bold text-white hover:bg-[#4682B4] "
           >
             Submit
           </button>
