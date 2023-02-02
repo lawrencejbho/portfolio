@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
@@ -12,15 +11,15 @@ type Props = {
 // slider doesn't work with this css
 
 function Projects({ projects }: Props) {
-  function slideLeft() {
-    const slider = document.getElementById("slider") as HTMLElement;
-    slider.scrollLeft = slider.scrollLeft - 500;
-  }
+  // function slideLeft() {
+  //   const slider = document.getElementById("slider") as HTMLElement;
+  //   slider.scrollLeft = slider.scrollLeft - 500;
+  // }
 
-  function slideRight() {
-    const slider = document.getElementById("slider") as HTMLElement;
-    slider.scrollLeft = slider.scrollLeft + 500;
-  }
+  // function slideRight() {
+  //   const slider = document.getElementById("slider") as HTMLElement;
+  //   slider.scrollLeft = slider.scrollLeft + 500;
+  // }
 
   return (
     <motion.div
@@ -34,10 +33,10 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      <ChevronLeftIcon
+      {/* <ChevronLeftIcon
         onClick={slideLeft}
         className="hidden w-10 cursor-pointer opacity-50 hover:opacity-100 sm:flex"
-      />
+      /> */}
       <div
         id="slider"
         className="scroll mt-16 flex h-[83%] w-full snap-x snap-mandatory space-x-5 overflow-x-scroll scroll-smooth p-6 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]"
@@ -47,10 +46,10 @@ function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <ChevronRightIcon
+      {/* <ChevronRightIcon
         onClick={slideRight}
         className="hidden w-10 cursor-pointer opacity-50 hover:opacity-100 sm:flex"
-      />
+      /> */}
     </motion.div>
   );
 }

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +6,6 @@ import { PageInfo } from "../../typings";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 
-import Profile from "../../public/profile.jpg";
 import { urlFor } from "../../sanity";
 
 type Props = {

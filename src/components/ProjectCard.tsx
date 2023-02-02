@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "../../typings";
@@ -22,9 +20,9 @@ export default function ProjectCard({ project }: Props) {
         alt=""
       ></motion.img>
       <div className="px-0 md:px-10">
-        <h4 className="text-center text-4xl text-gray-100">{project.title}</h4>
+        <h4 className="text-center text-4xl text-gray-100">{project?.title}</h4>
         <div className="my-2 flex space-x-2">
-          {project.technologies.map((technology) => (
+          {project?.technologies.map((technology) => (
             <img
               key={technology._id}
               className="h-10 w-10 "
@@ -33,7 +31,7 @@ export default function ProjectCard({ project }: Props) {
           ))}
         </div>
 
-        <p className="py-5 text-gray-100">{project.summary}</p>
+        <p className="py-5 text-gray-100">{project?.summary}</p>
         <ul className="ml-5 list-disc space-y-4 text-lg"></ul>
       </div>
     </article>
