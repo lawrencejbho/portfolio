@@ -13,7 +13,6 @@ type Props = {
 // need to use <Image />
 
 function Skill({ skill, directionLeft }: Props) {
-  console.log(skill);
   return (
     <div className="group relative flex cursor-pointer">
       <motion.div
