@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { social } from "sanity/schemas/social";
+import { social } from "schemas/social";
 import { Social } from "../../typings";
 
 type Props = {

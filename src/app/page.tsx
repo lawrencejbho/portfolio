@@ -1,4 +1,3 @@
-import { GetServerSideProps } from "next";
 import Image from "next/image";
 
 import Header from "../components/Header";
@@ -74,7 +73,7 @@ export default function Home({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getInitialProps = async () => {
   const pageInfo: PageInfo[] = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
@@ -89,6 +88,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       projects,
       socials,
     },
-    revalidate: 3600,
+    // revalidate: 3600,
   };
 };
