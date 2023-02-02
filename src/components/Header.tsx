@@ -18,15 +18,14 @@ function Header({ socials }: Props) {
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        {socials &&
-          socials.map((social) => (
-            <SocialIcon
-              key={social._id}
-              url={social.url}
-              fgColor="gray"
-              bgColor="transparent"
-            />
-          ))}
+        {socials?.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        ))}
       </motion.div>
       <motion.div
         className="flex cursor-pointer flex-row items-center text-gray-300"
