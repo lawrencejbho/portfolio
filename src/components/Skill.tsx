@@ -1,16 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-import TypescriptIcon from "../../public/typescript.png";
 import { motion } from "framer-motion";
+import { Skill } from "../../typings";
+import { urlFor } from "../../sanity";
 
 type Props = {
+  skill: Skill;
   directionLeft?: boolean;
 };
 
 // need to use <Image />
 
-function Skill({ directionLeft }: Props) {
+function Skill({ skill, directionLeft }: Props) {
+  console.log(skill);
   return (
     <div className="group relative flex cursor-pointer">
       <motion.div
@@ -21,8 +24,8 @@ function Skill({ directionLeft }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
       >
-        <Image
-          src={TypescriptIcon}
+        <img
+          src={urlFor(skill?.image).url()}
           className="h-24 w-24 rounded-full border border-gray-500 object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           alt="typescript"
         />

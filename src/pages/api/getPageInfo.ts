@@ -3,8 +3,9 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../../sanity";
 import { PageInfo } from "../../../typings";
 
+// make sure to use [0] here so that you'll grab the first in the index.  You'll run into type errors if you try to use [0] later on in the react components.
 const query = groq`
-    *[_type == "pageInfo"]
+    *[_type == "pageInfo"][0]
 `;
 
 type Data = {

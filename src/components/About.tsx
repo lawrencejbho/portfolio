@@ -31,7 +31,7 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        src={urlFor(pageInfo[0]?.profilePic).url()}
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-80 md:w-64 md:rounded-lg xl:h-[450px] xl:w-[450px]"
       />
 
@@ -47,7 +47,7 @@ function About({ pageInfo }: Props) {
           <span className="underline decoration-[#4682B4]">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo[0]?.backgroundInformation}</p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </motion.div>
     </motion.div>
   );

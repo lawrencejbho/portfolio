@@ -7,7 +7,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
-import { Experience, PageInfo, Skill, Project, Social } from "../../typings";
+import { PageInfo, Skill, Project, Social } from "../../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
@@ -26,7 +26,7 @@ export default function Home({ pageInfo, projects, skills, socials }: Props) {
   return (
     <main>
       {/* <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[rgb(36,36,36)] text-white overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]"> */}
-      <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[#fafafa] text-black overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+      <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
         <Header socials={socials} />
 
         <section id="hero" className="snap-start">

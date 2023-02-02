@@ -12,7 +12,6 @@ type Props = {
 // slider doesn't work with this css
 
 function Projects({ projects }: Props) {
-  console.log(projects);
   function slideLeft() {
     const slider = document.getElementById("slider") as HTMLElement;
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -29,7 +28,7 @@ function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
       //   exit={{ opacity: 0 }}
-      className="relative mx-auto flex h-screen max-w-full  flex-row items-center justify-evenly overflow-hidden px-5 text-left"
+      className="relative mx-auto flex h-screen max-w-full flex-row items-center justify-evenly overflow-hidden px-5 text-left"
     >
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
         Projects

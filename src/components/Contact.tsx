@@ -79,7 +79,7 @@ function Contact({}: Props) {
           />
           <button
             type="submit"
-            className="py-50 rounded-md bg-[#4682B4]/90 px-10 text-lg font-bold text-white hover:bg-[#4682B4] "
+            className="py-50 rounded-md bg-[#4682B4]/90 px-10 text-lg font-bold text-gray-200 hover:bg-[#4682B4] hover:text-white"
           >
             Submit
           </button>

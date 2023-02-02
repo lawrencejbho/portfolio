@@ -16,7 +16,7 @@ type Props = {
 
 function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: [`Hi, my name is ${pageInfo[0].name}`, "coffee enthusiast"],
+    words: [`Hi, my name is ${pageInfo?.name}`, "coffee enthusiast"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -25,7 +25,7 @@ function Hero({ pageInfo }: Props) {
       {/* <BackgroundCircles /> */}
       <Image
         className="relative mx-auto h-40 w-40 rounded-full object-cover "
-        src={urlFor(pageInfo[0]?.heroImage).url()}
+        src={urlFor(pageInfo?.heroImage).url()}
         alt="profile-image"
         width="200"
         height="200"
@@ -33,7 +33,7 @@ function Hero({ pageInfo }: Props) {
 
       <div className="z-20">
         <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">
-          {pageInfo[0].role}
+          {pageInfo?.role}
         </h2>
         <h1 className="px-10 text-5xl font-semibold lg:text-6xl">
           <span className="mr-3 text-gray-800">{text}</span>

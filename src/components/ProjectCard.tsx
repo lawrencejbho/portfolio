@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: Props) {
           {project.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-10 w-10 rounded-full"
+              className="h-10 w-10 "
               src={urlFor(technology.image).url()}
             />
           ))}
