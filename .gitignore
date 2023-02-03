@@ -12,10 +12,7 @@
 /.next/
 /out/
 
-/sanity/node_modules
-
-/sanity/sanity.config.ts
-/sanity/sanity.cli.ts
+sanity/node_modules
 
 # production
 /build

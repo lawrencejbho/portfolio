@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project } from "../../typings";
 import { urlFor } from "../../sanity";
@@ -16,17 +17,19 @@ export default function ProjectCard({ project }: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className=" w-full object-center  lg:w-[75%] xl:w-[50%]"
-        src={urlFor(project?.image).url()}
+        src={urlFor(project?.image)}
         alt=""
       ></motion.img>
       <div className="px-0 md:px-10">
         <h4 className="text-center text-4xl text-gray-100">{project?.title}</h4>
         <div className="my-2 flex space-x-2">
           {project?.technologies.map((technology) => (
-            <img
+            <Image
               key={technology._id}
               className="h-10 w-10 "
-              src={urlFor(technology.image).url()}
+              src={urlFor(technology.image)}
+              width="10"
+              height="10"
             />
           ))}
         </div>

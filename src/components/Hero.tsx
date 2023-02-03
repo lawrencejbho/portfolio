@@ -8,6 +8,8 @@ import BackgroundCircles from "./BackgroundCircles";
 
 import { urlFor } from "../../sanity";
 
+import ProfilePic from "../../public/profile.jpg";
+
 type Props = {
   pageInfo: PageInfo;
 };
@@ -23,7 +25,7 @@ function Hero({ pageInfo }: Props) {
       {/* <BackgroundCircles /> */}
       <Image
         className="relative mx-auto h-40 w-40 rounded-full object-cover "
-        src={urlFor(pageInfo?.heroImage).url()}
+        src={ProfilePic}
         alt="profile-image"
         width="200"
         height="200"

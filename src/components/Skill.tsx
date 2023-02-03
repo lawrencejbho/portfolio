@@ -23,10 +23,12 @@ function Skill({ skill, directionLeft }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
       >
-        <img
-          src={urlFor(skill?.image).url()}
+        <Image
+          src={urlFor(skill?.image)}
           className="h-24 w-24 rounded-full border border-gray-500 object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           alt="typescript"
+          width="96"
+          height="96"
         />
       </motion.div>
       <div className="absolute z-0 h-24 w-24 rounded-full opacity-0 transition duration-300 ease-in-out group-hover:bg-white group-hover:opacity-80 md:h-28 md:w-28 xl:h-32 xl:w-32">

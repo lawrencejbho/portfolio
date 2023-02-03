@@ -6,6 +6,8 @@ import { PageInfo } from "../../typings";
 
 import { urlFor } from "../../sanity";
 
+import AboutPic from "../../public/about.jpg";
+
 type Props = {
   pageInfo: PageInfo;
 };
@@ -17,12 +19,17 @@ Utilize exit to replay the animation every time it gets to that part of the page
 
 function About({ pageInfo }: Props) {
   return (
-    <motion.div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left">
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1 }}
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
+    >
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
         About
       </h3>
 
-      <motion.img
+      <motion.div
         initial={{
           x: -200,
           opacity: 0,
@@ -30,9 +37,14 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-80 md:w-64 md:rounded-lg xl:h-[450px] xl:w-[450px]"
-      />
+      >
+        <Image
+          src={AboutPic}
+          className="-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-80 md:w-64 md:rounded-lg xl:h-[500px] xl:w-[500px]"
+          width="500"
+          height="500"
+        />
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
