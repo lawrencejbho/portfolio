@@ -16,7 +16,11 @@ type Props = {
 
 function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: [`Hi, my name is ${pageInfo?.name}`, "coffee enthusiast"],
+    words: [
+      `Hi, my name is ${pageInfo?.name}`,
+      "I like to build with code",
+      "also, a ☕️ enthusiast",
+    ],
     loop: true,
     delaySpeed: 2000,
   });
@@ -29,6 +33,7 @@ function Hero({ pageInfo }: Props) {
         alt="profile-image"
         width="200"
         height="200"
+        priority
       />
 
       <div className="z-20">

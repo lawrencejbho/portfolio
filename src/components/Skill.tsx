@@ -25,15 +25,17 @@ function Skill({ skill, directionLeft }: Props) {
       >
         <Image
           src={urlFor(skill?.image)}
-          className="h-24 w-24 rounded-full border border-gray-500 object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
+          className="h-24 w-24 rounded-full border border-gray-500 bg-white object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           alt="typescript"
-          width="96"
-          height="96"
+          width="500"
+          height="500"
         />
       </motion.div>
       <div className="absolute z-0 h-24 w-24 rounded-full opacity-0 transition duration-300 ease-in-out group-hover:bg-white group-hover:opacity-80 md:h-28 md:w-28 xl:h-32 xl:w-32">
-        <div className="flex h-full items-center justify-center">
-          <p className="text-3xl font-bold text-black opacity-100">100%</p>
+        <div className="flex h-full items-center justify-center text-center">
+          <p className="text-lg font-bold text-black opacity-100 md:text-xl lg:text-2xl">
+            {skill?.title}
+          </p>
         </div>
       </div>
     </div>

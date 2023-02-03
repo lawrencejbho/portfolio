@@ -28,8 +28,8 @@ export default function ProjectCard({ project }: Props) {
               key={technology._id}
               className="h-10 w-10 "
               src={urlFor(technology.image)}
-              width="10"
-              height="10"
+              width="500"
+              height="500"
             />
           ))}
         </div>

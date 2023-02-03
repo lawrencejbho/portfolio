@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Projects2 from "../components/Projects2";
 import Contact from "../components/Contact";
 
 import { PageInfo, Skill, Project, Social } from "../../typings";
@@ -44,6 +45,10 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
 
       <section id="projects" className="snap-start">
         <Projects projects={projects} />
+      </section>
+
+      <section id="projects" className="snap-start">
+        <Projects2 projects={projects} />
       </section>
 
       <section id="contact" className="snap-center">

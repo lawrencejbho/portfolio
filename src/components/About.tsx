@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { PageInfo } from "../../typings";
+import { PageInfo, Experience } from "../../typings";
 
 import { urlFor } from "../../sanity";
 
@@ -10,6 +10,7 @@ import AboutPic from "../../public/about.jpg";
 
 type Props = {
   pageInfo: PageInfo;
+  experiences: Experience[];
 };
 
 /* 
@@ -17,7 +18,7 @@ I was having trouble using framer motion on the top div so put it on the paragra
 Utilize exit to replay the animation every time it gets to that part of the page.  
 */
 
-function About({ pageInfo }: Props) {
+function About({ pageInfo, experiences }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -40,9 +41,10 @@ function About({ pageInfo }: Props) {
       >
         <Image
           src={AboutPic}
-          className="-mb-20 h-56 w-56 flex-shrink-0 rounded-full object-cover md:mb-0 md:h-80 md:w-64 md:rounded-lg xl:h-[500px] xl:w-[500px]"
-          width="500"
-          height="500"
+          className="-mb-20 h-[400px] w-[400px] flex-shrink-0 rounded-full object-cover md:mb-0 md:h-[500px] md:w-[750px] md:rounded-lg "
+          width="1000"
+          height="1000"
+          alt="about-pic"
         />
       </motion.div>
 
