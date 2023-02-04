@@ -10,7 +10,7 @@ type Props = {
   directionLeft?: boolean;
 };
 
-// need to use <Image />
+// strange issue where three of the icons won't show up when using a small width
 
 function Skill({ skill, directionLeft }: Props) {
   return (
@@ -25,7 +25,7 @@ function Skill({ skill, directionLeft }: Props) {
       >
         <Image
           src={urlFor(skill?.image)}
-          className="h-24 w-24 rounded-full border border-gray-500 bg-white object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
+          className=" h-24 w-24 rounded-full border border-gray-500 bg-white object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           alt="typescript"
           width="500"
           height="500"

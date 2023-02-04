@@ -4,8 +4,6 @@ import ProjectCard from "./ProjectCard";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Project } from "../../typings";
 
-import Carousel from "./carousel/Carousel";
-
 type Props = {
   projects: Project[];
 };
@@ -35,7 +33,6 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      {/* <Carousel subElementId="project._id" maxElements={projects.length}> */}
       <ChevronLeftIcon
         onClick={slideLeft}
         className="hidden w-10 cursor-pointer opacity-50 hover:opacity-100 sm:flex"
@@ -48,7 +45,6 @@ function Projects({ projects }: Props) {
           <ProjectCard key={project._id} project={project} />
         ))}
       </div>
-      {/* </Carousel> */}
 
       <ChevronRightIcon
         onClick={slideRight}
