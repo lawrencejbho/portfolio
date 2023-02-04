@@ -60,7 +60,20 @@ function About({ pageInfo, experiences }: Props) {
           <span className="underline decoration-[#4682B4]">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="text-base">
+          Hello! 👋🏼 My name is Lawrence and I'm a Frontend Software Engineer
+          based in San Francisco. I first learned how to code when I was 9 using
+          Visual Basic to make text scrolling games.
+        </p>
+        <p className="text-base">
+          Before jumping in software development, I was a cybersecurity and
+          computer networking systems engineer with a decade of experience in
+          the industry.
+        </p>
+        <p className="text-base">
+          I'm passionate about building accessible, inspiring products and
+          digital experiences.
+        </p>
       </motion.div>
     </motion.div>
   );

@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" w-full object-center  lg:w-[75%] xl:w-[50%]"
+        className=" w- object-center  lg:w-[75%] xl:w-[50%]"
         src={urlFor(project?.image)}
         alt=""
       ></motion.img>

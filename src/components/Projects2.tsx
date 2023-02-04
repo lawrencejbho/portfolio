@@ -3,35 +3,52 @@ import React, { useState } from "react";
 import { Project } from "../typings";
 import ProjectCard2 from "./ProjectCard2";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import NavButton from "./NavButton";
 
 type Props = { projects: Project[] };
 
 export default function Project2({ projects }: Props) {
-  const [index, setIndex] = useState(1);
+  const [projectIndex, setProjectIndex] = useState(1);
 
   function slideIntoViewRight() {
-    if (index >= projects.length) {
-      setIndex(projects.length);
+    if (projectIndex >= projects.length) {
+      setProjectIndex(projects.length);
       return;
     }
-    const nextSlide = `slider${index + 1}`;
+    const nextSlide = `slider${projectIndex + 1}`;
 
     const slider = document.getElementById(nextSlide) as HTMLElement;
     slider.scrollIntoView({ behavior: "smooth", block: "center" });
-    setIndex((prevValue) => prevValue + 1);
+    setProjectIndex((prevValue) => prevValue + 1);
   }
 
   function slideIntoViewLeft() {
-    if (index <= 1) {
-      setIndex(1);
+    if (projectIndex <= 1) {
+      setProjectIndex(1);
       return;
     }
 
-    const prevSlide = `slider${index - 1}`;
+    const prevSlide = `slider${projectIndex - 1}`;
 
     const slider = document.getElementById(prevSlide) as HTMLElement;
     slider.scrollIntoView({ behavior: "smooth", block: "center" });
-    setIndex((prevValue) => prevValue - 1);
+    setProjectIndex((prevValue) => prevValue - 1);
+  }
+
+  function handleClick(index) {
+    if (projectIndex < index) {
+      const nextSlide = `slider${projectIndex + 1}`;
+
+      const slider = document.getElementById(nextSlide) as HTMLElement;
+      slider.scrollIntoView({ behavior: "smooth", block: "center" });
+      setProjectIndex((prevValue) => prevValue + 1);
+    } else if (projectIndex > index) {
+      const prevSlide = `slider${projectIndex - 1}`;
+
+      const slider = document.getElementById(prevSlide) as HTMLElement;
+      slider.scrollIntoView({ behavior: "smooth", block: "center" });
+      setProjectIndex((prevValue) => prevValue - 1);
+    }
   }
 
   return (
@@ -41,7 +58,7 @@ export default function Project2({ projects }: Props) {
         transition={{ duration: 1.5 }}
         whileInView={{ opacity: 1 }}
         //   exit={{ opacity: 0 }}
-        className="relative mx-auto flex h-screen max-w-full flex-row items-center justify-evenly overflow-hidden text-left"
+        className="relative mx-auto flex h-5/6 max-w-full flex-row items-center justify-evenly overflow-hidden text-left"
       >
         <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500">
           Projects
@@ -52,9 +69,14 @@ export default function Project2({ projects }: Props) {
           className="absolute left-0 z-40 ml-20 w-10 cursor-pointer opacity-50 hover:opacity-100"
         />
 
-        <div className="scroll z-20 flex w-full snap-x snap-mandatory overflow-x-scroll  scroll-smooth scrollbar overflow-y-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+        <div className="scroll z-20 flex w-full snap-x snap-mandatory overflow-y-hidden  overflow-x-scroll scroll-smooth scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
           {projects?.map((project, index) => (
-            <ProjectCard2 key={project._id} project={project} index={index} />
+            <ProjectCard2
+              key={project._id}
+              project={project}
+              index={index}
+              alt="project"
+            />
           ))}
         </div>
 
@@ -62,6 +84,15 @@ export default function Project2({ projects }: Props) {
           onClick={slideIntoViewRight}
           className="absolute right-0 z-40 mr-20 w-10 cursor-pointer opacity-50 hover:opacity-100"
         />
+        <div className="absolute bottom-20 z-40 flex items-center justify-center space-x-5">
+          {projects?.map((project, index) => (
+            <NavButton
+              value={index + 1}
+              handleClick={handleClick}
+              currentIndex={projectIndex}
+            />
+          ))}
+        </div>
         <div className="absolute top-[30%] left-0 h-[300px] w-full -skew-y-12 bg-[#f7AB0A]/10" />
       </motion.div>
     </div>
