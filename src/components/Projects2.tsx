@@ -66,7 +66,7 @@ export default function Project2({ projects }: Props) {
 
         <ChevronLeftIcon
           onClick={slideIntoViewLeft}
-          className="absolute left-0 z-40 ml-20 w-10 cursor-pointer opacity-50 hover:opacity-100"
+          className="invisible absolute left-0 z-40 ml-10 w-10 cursor-pointer opacity-50 hover:text-[#4682B4] hover:opacity-100 hover:transition sm:visible md:ml-20 xl:ml-32"
         />
 
         <div className="scroll z-20 flex w-full snap-x snap-mandatory overflow-y-hidden  overflow-x-scroll scroll-smooth scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
@@ -82,7 +82,7 @@ export default function Project2({ projects }: Props) {
 
         <ChevronRightIcon
           onClick={slideIntoViewRight}
-          className="absolute right-0 z-40 mr-20 w-10 cursor-pointer opacity-50 hover:opacity-100"
+          className=" invisible absolute right-0 z-40 mr-10 w-10 cursor-pointer opacity-50 hover:text-[#4682B4] hover:opacity-100 hover:transition sm:visible md:mr-20  xl:mr-32 "
         />
         <div className="absolute bottom-20 z-40 flex items-center justify-center space-x-5">
           {projects?.map((project, index) => (

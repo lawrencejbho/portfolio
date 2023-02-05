@@ -71,8 +71,8 @@ function About({ pageInfo, experiences }: Props) {
           the industry.
         </p>
         <p className="text-base">
-          I'm passionate about building accessible, inspiring products and
-          digital experiences.
+          I'm a higly motivated and passionate individual looking to to build
+          accessible, inspiring products and digital experiences.
         </p>
       </motion.div>
     </motion.div>

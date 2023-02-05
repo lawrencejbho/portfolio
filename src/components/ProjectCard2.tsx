@@ -21,19 +21,10 @@ export default function Project2Card({ project, index }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-[10%] object-center "
+        className="radius-sm w-full object-center lg:w-[50%] xl:w-[40%] "
         src={urlFor(project?.image)}
         alt=""
       />
-
-      {/* <div className=""></div>
-
-      <h4 className="text-center text-4xl font-semibold">
-        <span className="underline decoration-[#f7AB0A]/50">
-          {project?.title}
-        </span>
-      </h4>
-      <p className="text-center text-lg md:text-left">{project?.summary}</p> */}
 
       <div className="items-center justify-center space-y-10 px-0">
         <div className="flex-col items-center text-center md:flex md:justify-between">
