@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { Project } from "../typings";
+import { Project } from "../../typings";
 import ProjectCard2 from "./ProjectCard2";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import NavButton from "./NavButton";
+import { join } from "path";
 
 type Props = { projects: Project[] };
 
@@ -35,7 +36,7 @@ export default function Project2({ projects }: Props) {
     setProjectIndex((prevValue) => prevValue - 1);
   }
 
-  function handleClick(index) {
+  function handleClick(index: number) {
     if (projectIndex < index) {
       const nextSlide = `slider${projectIndex + 1}`;
 
@@ -69,14 +70,9 @@ export default function Project2({ projects }: Props) {
           className="invisible absolute left-0 z-40 ml-10 w-10 cursor-pointer opacity-50 hover:text-[#4682B4] hover:opacity-100 hover:transition sm:visible md:ml-20 xl:ml-32"
         />
 
-        <div className="scroll z-20 flex w-full snap-x snap-mandatory overflow-y-hidden  overflow-x-scroll scroll-smooth scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+        <div className="scroll z-20 flex w-full snap-x snap-mandatory overflow-y-hidden  overflow-x-scroll scroll-smooth  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
           {projects?.map((project, index) => (
-            <ProjectCard2
-              key={project._id}
-              project={project}
-              index={index}
-              alt="project"
-            />
+            <ProjectCard2 key={project._id} project={project} index={index} />
           ))}
         </div>
 

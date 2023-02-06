@@ -3,11 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 import { urlFor } from "../../sanity";
-import { Project } from "../typings";
+import { Project } from "../../typings";
 import Projects from "./Projects";
 import { forEach } from "lodash";
 
-type Props = { project: Project };
+type Props = { project: Project; index: number };
 
 export default function Project2Card({ project, index }: Props) {
   return (
@@ -39,6 +39,7 @@ export default function Project2Card({ project, index }: Props) {
                 src={urlFor(technology.image)}
                 width="500"
                 height="500"
+                alt={technology.title}
               />
             ))}
           </div>

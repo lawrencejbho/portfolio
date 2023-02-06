@@ -1,6 +1,10 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  value: number;
+  handleClick: Function;
+  currentIndex: number;
+};
 
 function NavButton({ value, handleClick, currentIndex }: Props) {
   const selectedStyle = {
@@ -10,9 +14,8 @@ function NavButton({ value, handleClick, currentIndex }: Props) {
   return (
     <div
       onClick={() => handleClick(value)}
-      index={value}
       className="z-60 h-4 w-4 cursor-pointer rounded-full bg-gray-400"
-      style={currentIndex === value ? selectedStyle : null}
+      style={currentIndex === value ? selectedStyle : {}}
     ></div>
   );
 }

@@ -39,7 +39,7 @@ function Projects({ projects }: Props) {
       />
       <div
         id="slider"
-        className="scroll mt-16 flex h-[83%] w-full snap-x snap-mandatory space-x-5 overflow-x-scroll scroll-smooth p-6 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]"
+        className="scroll mt-16 flex h-[83%] w-full snap-x snap-mandatory space-x-5 overflow-x-scroll scroll-smooth p-6  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]"
       >
         {projects?.map((project) => (
           <ProjectCard key={project._id} project={project} />
