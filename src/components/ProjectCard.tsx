@@ -9,6 +9,7 @@ type Props = {
 };
 
 export default function ProjectCard({ project }: Props) {
+  project.sort();
   return (
     <article className="flex w-full flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-gray-500 p-10 opacity-90 transition-opacity duration-200 hover:opacity-100 sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%]">
       <motion.img

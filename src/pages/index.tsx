@@ -27,8 +27,17 @@ type Props = {
 };
 
 const Home = ({ pageInfo, projects, skills, socials }: Props) => {
+  // help to modify the project order while I figure out what's wrong with sanity
+  function swapIndexes(array, indexA, indexB) {
+    var tmp = array[indexA];
+    array[indexA] = array[indexB];
+    array[indexB] = tmp;
+
+    return array;
+  }
+
   return (
-    <div className="z-0 h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+    <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
       <Header socials={socials} />
 
       <section id="hero" className="snap-start">
@@ -48,7 +57,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
       </section> */}
 
       <section id="projects" className="snap-start">
-        <Projects2 projects={projects} />
+        <Projects2 projects={swapIndexes(projects, 0, 2)} />
       </section>
 
       <section id="contact" className="snap-center">
