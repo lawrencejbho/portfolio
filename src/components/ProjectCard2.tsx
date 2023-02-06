@@ -5,11 +5,22 @@ import React from "react";
 import { urlFor } from "../../sanity";
 import { Project } from "../../typings";
 import Projects from "./Projects";
-import { forEach } from "lodash";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 type Props = { project: Project; index: number };
 
 export default function Project2Card({ project, index }: Props) {
+  const demoLinks = [
+    "https://www.habbyapp.com",
+    "https://lawrencejbho.com",
+    "https://google.com",
+  ];
+  const githubLinks = [
+    "https://github.com/lawrencejbho/react-habit-tracker",
+    "https://github.com/lawrencejbho/next-portfolio",
+    "https://github.com",
+  ];
+
   return (
     <div
       id={`slider${index + 1}`}
@@ -21,7 +32,7 @@ export default function Project2Card({ project, index }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="radius-sm w-full object-center lg:w-[50%] xl:w-[40%] "
+        className="radius-sm w-full object-center lg:w-[75%] xl:w-[60%] "
         src={urlFor(project?.image)}
         alt=""
       />
@@ -47,6 +58,30 @@ export default function Project2Card({ project, index }: Props) {
         <p className="py-2 text-sm  text-gray-500 md:py-5 md:text-lg">
           {project?.summary}
         </p>
+      </div>
+      <div className="flex w-full flex-row items-center justify-center ">
+        <a href={demoLinks[index]}>
+          <button
+            type="button"
+            className="break-inside w-42 mr-4 mb-4 flex rounded-3xl bg-sky-900 px-4 py-2 "
+          >
+            <div className="flex flex-1 items-center justify-between text-white hover:text-gray-300">
+              <span className="text-lg font-medium ">Live Demo</span>
+              <ArrowRightIcon className="ml-4  w-6" />
+            </div>
+          </button>
+        </a>
+        <a href={githubLinks[index]}>
+          <button
+            type="button"
+            className="break-inside w-42 mb-4 flex rounded-3xl bg-black px-4 py-2 "
+          >
+            <div className="flex flex-1 content-center items-center justify-between text-center text-white hover:text-gray-300">
+              <span className=" text-lg font-medium ">Github</span>
+              <ArrowRightIcon className="ml-4 w-6" />
+            </div>
+          </button>
+        </a>
       </div>
     </div>
   );
