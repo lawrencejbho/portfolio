@@ -27,15 +27,6 @@ type Props = {
 };
 
 const Home = ({ pageInfo, projects, skills, socials }: Props) => {
-  // help to modify the project order while I figure out what's wrong with sanity
-  function swapIndexes(array, indexA, indexB) {
-    var tmp = array[indexA];
-    array[indexA] = array[indexB];
-    array[indexB] = tmp;
-
-    return array;
-  }
-
   return (
     <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
       <Header socials={socials} />
@@ -57,7 +48,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
       </section> */}
 
       <section id="projects" className="snap-start">
-        <Projects2 projects={swapIndexes(projects, 0, 2)} />
+        <Projects2 projects={projects} />
       </section>
 
       <section id="contact" className="snap-center">
@@ -80,10 +71,18 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  function swapIndexes(array) {
+    let tmp = array.pop();
+    array.unshift(tmp);
+    return array;
+  }
+
   const pageInfo = await fetchPageInfo();
   const skills = await fetchSkills();
   const projects = await fetchProjects();
   const socials = await fetchSocials();
+
+  swapIndexes(projects);
 
   return {
     props: {
