@@ -1,6 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { motion } from "framer-motion";
 
 type Inputs = {
   name: string;
@@ -19,7 +20,12 @@ function Contact({}: Props) {
   };
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left">
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.2 }}
+      whileInView={{ opacity: 1 }}
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
+    >
       <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500">
         Contact
       </h3>
@@ -84,7 +90,7 @@ function Contact({}: Props) {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

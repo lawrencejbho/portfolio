@@ -12,7 +12,7 @@ function Skills({ skills }: Props) {
     <div>
       <motion.div
         initial={{ opacity: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         className="relative mx-auto flex h-screen min-h-screen max-w-[2000px] flex-col items-center justify-center text-center md:text-left xl:flex-row xl:space-y-0 xl:px-10"
       >

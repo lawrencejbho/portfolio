@@ -37,15 +37,14 @@ function Hero({ pageInfo }: Props) {
       />
 
       <div className="z-20">
-        <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">
+        <h2 className="px-2 pb-2 text-sm uppercase tracking-[15px] text-gray-500 ">
           {pageInfo?.role}
         </h2>
-        <h1 className="px-10 text-5xl font-semibold lg:text-6xl">
+        <h1 className="px-8 text-5xl font-semibold md:mt-4 lg:text-6xl">
           <span className="mr-3 text-gray-800">{text}</span>
           <Cursor cursorColor="#4682B4" />
         </h1>
-
-        <div className="pt-5">
+        <div className="mt-4">
           <a href="#about">
             <button className="heroButton">About</button>
           </a>
@@ -57,6 +56,7 @@ function Hero({ pageInfo }: Props) {
           </a>
         </div>
       </div>
+      {/* <div className="absolute pt-52 sm:pt-32 md:relative md:pt-0"> */}
     </div>
   );
 }

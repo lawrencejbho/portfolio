@@ -22,7 +22,7 @@ function About({ pageInfo, experiences }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1.2 }}
       whileInView={{ opacity: 1 }}
       className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
@@ -41,7 +41,7 @@ function About({ pageInfo, experiences }: Props) {
       >
         <Image
           src={AboutPic}
-          className="-mb-20 h-[400px] w-[400px] flex-shrink-0 rounded-full object-cover md:mb-0 md:h-[500px] md:w-[750px] md:rounded-lg "
+          className="mt-24 h-[200px] w-[200px] flex-shrink-0 rounded-full object-cover sm:h-[300px] sm:w-[300px] md:mb-0 md:h-[500px] md:w-[750px] md:rounded-lg "
           width="1000"
           height="1000"
           alt="about-pic"
@@ -53,7 +53,7 @@ function About({ pageInfo, experiences }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="space-y-10 px-0 md:px-10"
+        className=" mb-20 space-y-4 px-0 sm:space-y-10 md:px-10 md:pt-20"
       >
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
@@ -62,17 +62,19 @@ function About({ pageInfo, experiences }: Props) {
         </h4>
         <p className="text-base">
           Hello! 👋🏼 My name is Lawrence and I'm a Frontend Software Engineer
-          based in San Francisco. I first learned how to code when I was 9 using
-          Visual Basic to make text scrolling games.
+          based in San Francisco. I'm a higly motivated and passionate
+          individual that loves to create fun, accessible, engaging products and
+          digital experiences.
         </p>
         <p className="text-base">
-          Before jumping in software development, I was a cybersecurity and
-          computer networking systems engineer with a decade of experience in
-          the industry.
+          I first learned how to code using Visual Basic in a summer school
+          program to make text scrolling games. Before jumping into software
+          development, I was a cybersecurity and computer networking systems
+          engineer with a decade of experience in the industry.
         </p>
         <p className="text-base">
-          I'm a higly motivated and passionate individual looking to to build
-          accessible, inspiring products and digital experiences.
+          In my free time I like to stay fit, teach my cats new tricks, and play
+          guitar.
         </p>
       </motion.div>
     </motion.div>

@@ -12,13 +12,13 @@ type Props = { project: Project; index: number };
 export default function Project2Card({ project, index }: Props) {
   const demoLinks = [
     "https://www.habbyapp.com",
-    "https://lawrencejbho.com",
-    "https://google.com",
+    "https://www.lawrencejbho.com",
+    "https://github.com/lawrencejbho/react-quizzical-trivia",
   ];
   const githubLinks = [
     "https://github.com/lawrencejbho/react-habit-tracker",
     "https://github.com/lawrencejbho/next-portfolio",
-    "https://github.com",
+    "https://github.com/lawrencejbho/react-quizzical-trivia",
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function Project2Card({ project, index }: Props) {
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         className="radius-sm w-full object-center lg:w-[75%] xl:w-[60%] "
         src={urlFor(project?.image)}
         alt=""
