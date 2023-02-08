@@ -1,43 +1,88 @@
-import React from "react";
 import Image from "next/image";
+
 import { motion } from "framer-motion";
-import { Project } from "../../typings";
+import React from "react";
 import { urlFor } from "../../sanity";
+import { Project } from "../../typings";
+import Projects from "./Projects";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
-type Props = {
-  project: Project;
-};
+type Props = { project: Project; index: number };
 
-export default function ProjectCard({ project }: Props) {
-  project.sort();
+export default function ProjectCard({ project, index }: Props) {
+  const demoLinks = [
+    "https://www.habbyapp.com",
+    "https://www.lawrencejbho.com",
+    "https://github.com/lawrencejbho/react-quizzical-trivia",
+  ];
+  const githubLinks = [
+    "https://github.com/lawrencejbho/react-habit-tracker",
+    "https://github.com/lawrencejbho/next-portfolio",
+    "https://github.com/lawrencejbho/react-quizzical-trivia",
+  ];
+
   return (
-    <article className="flex w-full flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-gray-500 p-10 opacity-90 transition-opacity duration-200 hover:opacity-100 sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%]">
+    <div
+      id={`slider${index + 1}`}
+      className="flex h-screen w-screen flex-shrink-0 snap-center flex-col content-center items-center justify-center space-y-5 overflow-hidden p-20 text-center md:p-44"
+      key={index}
+    >
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className=" w- object-center  lg:w-[75%] xl:w-[50%]"
+        // viewport={{ once: true }}
+        className="radius-sm w-full object-center lg:w-[75%] xl:w-[60%] "
         src={urlFor(project?.image)}
         alt=""
-      ></motion.img>
-      <div className="px-0 md:px-10">
-        <h4 className="text-center text-4xl text-gray-100">{project?.title}</h4>
-        <div className="my-2 flex space-x-2">
-          {project?.technologies.map((technology) => (
-            <Image
-              key={technology._id}
-              className="h-10 w-10 "
-              src={urlFor(technology.image)}
-              width="500"
-              height="500"
-            />
-          ))}
-        </div>
+      />
 
-        <p className="py-5 text-gray-100">{project?.summary}</p>
-        <ul className="ml-5 list-disc space-y-4 text-lg"></ul>
+      <div className="items-center justify-center space-y-10 px-0">
+        <div className="flex-col items-center text-center md:flex md:justify-between">
+          <h1 className="text-2xl font-bold text-black md:text-4xl">
+            {project?.title}
+          </h1>
+          <div className="my-2 flex justify-center space-x-2">
+            {project?.technologies.map((technology) => (
+              <Image
+                key={technology._id}
+                className="h-10 w-10"
+                src={urlFor(technology.image)}
+                width="500"
+                height="500"
+                alt={technology.title}
+              />
+            ))}
+          </div>
+        </div>
+        <p className="py-2 text-sm  text-gray-500 md:py-5 md:text-lg">
+          {project?.summary}
+        </p>
       </div>
-    </article>
+      <div className="flex w-full flex-row items-center justify-center ">
+        <a href={demoLinks[index]}>
+          <button
+            type="button"
+            className="break-inside w-42 mr-4 mb-4 flex rounded-3xl bg-sky-900 px-4 py-2 "
+          >
+            <div className="flex flex-1 items-center justify-between text-white hover:text-gray-300">
+              <span className="text-lg font-medium ">Live Demo</span>
+              <ArrowRightIcon className="ml-4  w-6" />
+            </div>
+          </button>
+        </a>
+        <a href={githubLinks[index]}>
+          <button
+            type="button"
+            className="break-inside w-42 mb-4 flex rounded-3xl bg-black px-4 py-2 "
+          >
+            <div className="flex flex-1 content-center items-center justify-between text-center text-white hover:text-gray-300">
+              <span className=" text-lg font-medium ">Github</span>
+              <ArrowRightIcon className="ml-4 w-6" />
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
   );
 }

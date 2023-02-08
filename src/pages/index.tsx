@@ -7,7 +7,6 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Projects2 from "../components/Projects2";
 import Contact from "../components/Contact";
 
 import { PageInfo, Skill, Project, Social } from "../../typings";
@@ -28,7 +27,7 @@ type Props = {
 
 const Home = ({ pageInfo, projects, skills, socials }: Props) => {
   return (
-    <div className="z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+    <div className="scroll z-0 h-screen snap-y  overflow-y-scroll scroll-smooth bg-[#fafafa] text-black overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
       <Header socials={socials} />
 
       <section id="hero" className="snap-start">
@@ -42,13 +41,9 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
       <section id="skills" className="snap-start">
         <Skills skills={skills} />
       </section>
-      {/* 
-      <section id="projects" className="snap-start">
-        <Projects projects={projects} />
-      </section> */}
 
       <section id="projects" className="snap-start">
-        <Projects2 projects={projects} />
+        <Projects projects={projects} />
       </section>
 
       <section id="contact" className="snap-center">
