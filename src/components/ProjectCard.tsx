@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { urlFor } from "../../sanity";
 import { Project } from "../../typings";
-import Projects from "./Projects";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 type Props = { project: Project; index: number };

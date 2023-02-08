@@ -4,7 +4,6 @@ import { Project } from "../../typings";
 import ProjectCard from "./ProjectCard";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import NavButton from "./NavButton";
-import { join } from "path";
 
 type Props = { projects: Project[] };
 
