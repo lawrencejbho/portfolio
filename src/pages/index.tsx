@@ -27,7 +27,7 @@ type Props = {
 
 const Home = ({ pageInfo, projects, skills, socials }: Props) => {
   return (
-    <div className="scroll z-0 h-screen snap-y  overflow-y-scroll scroll-smooth bg-[#fafafa] text-black overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
+    <div className="scroll z-0 h-screen snap-y  overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
       <Header socials={socials} />
 
       <section id="hero" className="snap-start">
@@ -50,15 +50,15 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
         <Contact />
       </section>
 
-      <a href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#4682B4]">
-              <HomeIcon className="w-17 h-7 border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
-            </div>
+      <footer className="sticky bottom-5 z-50 w-full">
+        <div className=" flex items-center justify-center">
+          <div className=" flex h-9 w-9 items-center justify-center rounded-full bg-[#4682B4]">
+            <a href="#hero">
+              <HomeIcon className=" w-17  h-7 cursor-pointer border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
+            </a>
           </div>
-        </footer>
-      </a>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -23,7 +23,7 @@ export default function ProjectCard({ project, index }: Props) {
   return (
     <div
       id={`slider${index + 1}`}
-      className="flex h-screen w-screen flex-shrink-0 snap-center flex-col content-center items-center justify-center space-y-5 overflow-hidden p-20 text-center md:p-44"
+      className="z-20 flex h-screen w-screen flex-shrink-0 snap-center flex-col content-center items-center justify-center space-y-5 overflow-hidden p-20 text-center md:p-44"
       key={index}
     >
       <motion.img
@@ -59,7 +59,7 @@ export default function ProjectCard({ project, index }: Props) {
         </p>
       </div>
       <div className="flex w-full flex-row items-center justify-center ">
-        <a href={demoLinks[index]}>
+        <a href={demoLinks[index]} target="_blank">
           <button
             type="button"
             className="break-inside w-42 mr-4 mb-4 flex rounded-3xl bg-sky-900 px-4 py-2 "
@@ -70,7 +70,7 @@ export default function ProjectCard({ project, index }: Props) {
             </div>
           </button>
         </a>
-        <a href={githubLinks[index]}>
+        <a href={githubLinks[index]} target="_blank">
           <button
             type="button"
             className="break-inside w-42 mb-4 flex rounded-3xl bg-black px-4 py-2 "

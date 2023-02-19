@@ -13,11 +13,6 @@ type Props = {
   experiences: Experience[];
 };
 
-/* 
-I was having trouble using framer motion on the top div so put it on the paragraph and text.
-Utilize exit to replay the animation every time it gets to that part of the page.  
-*/
-
 function About({ pageInfo, experiences }: Props) {
   return (
     <motion.div
@@ -61,10 +56,9 @@ function About({ pageInfo, experiences }: Props) {
           background
         </h4>
         <p className="text-base">
-          Hello! 👋🏼 My name is Lawrence and I'm a Frontend Software Engineer
-          based in San Francisco. I'm a higly motivated and passionate
-          individual that loves to create fun, accessible, engaging products and
-          digital experiences.
+          Hello! 👋🏼 I'm a Frontend Software Engineer based in San Francisco. I'm
+          passionate about learning new things, solving problems, and creating
+          amazing digital experiences.
         </p>
         <p className="text-base">
           I first learned how to code using Visual Basic in a summer school
