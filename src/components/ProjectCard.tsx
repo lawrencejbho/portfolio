@@ -10,12 +10,14 @@ type Props = { project: Project; index: number };
 
 export default function ProjectCard({ project, index }: Props) {
   const demoLinks = [
+    "https://wrappedplus.com"
     "https://www.habbyapp.com",
     "https://www.lawrencejbho.com",
     "https://github.com/lawrencejbho/react-quizzical-trivia",
   ];
   const githubLinks = [
-    "https://github.com/lawrencejbho/react-habit-tracker",
+    "https://github.com/lawrencejbho/full-stack-spotify-wrapped-plus",
+    "https://github.com/lawrencejbho/full-stack-habit-tracker",
     "https://github.com/lawrencejbho/next-portfolio",
     "https://github.com/lawrencejbho/react-quizzical-trivia",
   ];
