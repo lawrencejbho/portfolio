@@ -69,8 +69,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   function swapIndexes(array) {
     let tmp = array.pop();
     array.unshift(tmp);
-    let tmp2 = array.slice(2, 3);
-    array.unshift(tmp2);
+    [array[1], array[2]] = [array[2], array[1]];
     return array;
   }
 
