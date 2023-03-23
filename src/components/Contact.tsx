@@ -31,10 +31,8 @@ function Contact({}: Props) {
       </h3>
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-center text-4xl font-semibold">
-          <span className="text-gray-800 underline decoration-[#4682B4]/80">
-            Lets talk
-          </span>
+        <h4 className="text-center text-3xl font-semibold">
+          <span className="text-gray-800 ">Say Hello!</span>
         </h4>
 
         <div className="space-y-10">

@@ -4,28 +4,37 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { Social } from "../../typings";
 
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+
 type Props = {
   socials: Social[];
 };
 
 function Header({ socials }: Props) {
   return (
-    <header className="sticky top-0 z-20 mx-auto flex max-w-7xl items-start justify-between p-5 xl:items-center">
+    <header className="sticky top-0 z-30 mx-auto flex max-w-7xl items-start justify-between p-5 xl:items-center">
       <motion.div
-        className="flex flex-row items-center"
+        className=" flex flex-row items-center space-x-4"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        {socials?.map((social) => (
-          <SocialIcon
-            key={social._id}
-            url={social.url}
-            fgColor="gray"
-            bgColor="transparent"
-            target="_blank"
-          />
-        ))}
+        <Link href="https://www.linkedin.com/in/lawrencejbho/" target="_blank">
+          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4]">
+            <FaLinkedin className=" text-gray-700 group-hover:text-white" />
+          </div>
+        </Link>
+        <Link href="https://twitter.com/_LawrenceHo" target="_blank">
+          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] ">
+            <FaTwitter className=" text-gray-700 group-hover:text-white" />
+          </div>
+        </Link>
+        <Link href="https://github.com/lawrencejbho" target="_blank">
+          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] ">
+            <FaGithub className=" text-gray-700 group-hover:text-white" />
+          </div>
+        </Link>
       </motion.div>
       <motion.div
         className="flex cursor-pointer flex-row items-center text-gray-300"
@@ -33,16 +42,21 @@ function Header({ socials }: Props) {
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <SocialIcon
+        {/* <SocialIcon
           className="cursor-pointer"
           network="email"
           fgColor="gray"
           bgColor="transparent"
           url="/#contact"
-        />
+        /> */}
+
         <a href="#contact">
-          <div className="hidden text-sm uppercase text-gray-400 md:inline-flex">
-            Get in Touch
+          <div className="group flex items-center justify-center space-x-2 pt-2 pr-4 transition duration-300 ease-in-out ">
+            <HiOutlineMail className="text-2xl text-gray-700 group-hover:text-[#4682B4]" />
+
+            <div className="hidden text-sm font-medium uppercase text-gray-700 group-hover:text-[#4682B4] md:inline-flex">
+              Contact
+            </div>
           </div>
         </a>
       </motion.div>

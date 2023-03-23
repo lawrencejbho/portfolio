@@ -33,7 +33,7 @@ export default function ProjectCard({ project, index }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         // viewport={{ once: true }}
-        className="radius-sm w-full object-center lg:w-[75%] xl:w-[60%] "
+        className="radius-sm w-full object-center lg:w-[75%] xl:w-[900px] "
         src={urlFor(project?.image)}
         alt=""
       />

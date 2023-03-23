@@ -8,6 +8,8 @@ import { urlFor } from "../../sanity";
 
 import AboutPic from "../../public/about.jpg";
 
+import Arrow from "../../public/right-arrow.png";
+
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -21,7 +23,7 @@ function About({ pageInfo, experiences }: Props) {
       whileInView={{ opacity: 1 }}
       className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 sm:visible">
         About
       </h3>
 
@@ -36,7 +38,7 @@ function About({ pageInfo, experiences }: Props) {
       >
         <Image
           src={AboutPic}
-          className="mt-24 h-[200px] w-[200px] flex-shrink-0 rounded-full object-cover sm:h-[300px] sm:w-[300px] md:mb-0 md:h-[500px] md:w-[750px] md:rounded-lg "
+          className="mt-24 h-[200px] w-[200px] flex-shrink-0 rounded-full object-cover sm:h-[300px] sm:w-[300px] sm:pt-4 md:mt-0 md:h-[350px] md:w-[350px] md:rounded-lg lg:h-[500px] lg:w-[500px]"
           width="1000"
           height="1000"
           alt="about-pic"
@@ -48,27 +50,45 @@ function About({ pageInfo, experiences }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className=" mb-20 space-y-4 px-0 sm:space-y-10 md:px-10 md:pt-20"
+        className=" mb-10 w-full space-y-4 px-0 sm:space-y-8 md:px-10 md:pt-14"
       >
-        <h4 className="text-4xl font-semibold">
-          Here is a{" "}
-          <span className="underline decoration-[#4682B4]">little</span>{" "}
-          background
+        <h4 className="flex justify-center space-x-3 font-semibold sm:text-2xl">
+          <span> Systems Engineer</span>
+          <Image src={Arrow} className="w-8 sm:mt-[.11rem] " />
+          <span className="underline decoration-[#4682B4]">
+            Software Engineer
+          </span>
         </h4>
-        <p className="text-base">
-          Hello! 👋🏼 I'm a Frontend Software Engineer based in San Francisco. I'm
-          passionate about learning new things, solving problems, and creating
-          amazing digital experiences.
+
+        <p className="text-xs md:text-sm  xl:text-base ">
+          Hello! 👋🏼 I'm a Full Stack Software Engineer based in San Francisco.
+          I'm passionate about learning new things, solving complex problems,
+          and creating amazing digital experiences. In 2022, I decided to pursue
+          sotware engineering full time and have since created four major
+          projects on my own. Currently, I'm working with a small business in
+          San Francisco as a Software Engineer to integrate and ETL their
+          payment processing data to increase operational efficiency and drive
+          business decisions. In my free time I like to stay fit, teach my cats
+          new tricks, and play guitar.
         </p>
-        <p className="text-base">
-          I first learned how to code using Visual Basic in a summer school
-          program to make text scrolling games. Before jumping into software
-          development, I was a cybersecurity and computer networking systems
-          engineer with a decade of experience in the industry.
-        </p>
-        <p className="text-base">
-          In my free time I like to stay fit, teach my cats new tricks, and play
-          guitar.
+        <p className="text-xs md:text-sm  xl:text-base ">
+          My path into software engineering is a non-conventional one. Before
+          jumping in, I was a high performing cybersecurity and computer
+          networking pre-sales Systems Engineer with 9 years of experience in
+          the industry. After many years of working with product, sales, and
+          customers, I continuously ran into a familiar mental road block. A lot
+          of days I would think to myself, "Wouldn't it be nice if I could code
+          up a feature really quickly" to help build a compelling demo for a
+          prospective client. Or "If only I could write an appliation to help
+          accelerate some of our sales initiatives" by using empirical data
+          versus anecdotally reviewing our wins and losses on a quarterly basis.
+          I felt like my abilities were limited by my own toolbox and the skill
+          I was missing was being able to build. I decided to use my nights and
+          weekends during the pandemic to learn to code in Python & Javascript.
+          After a year of diving into Web Development by building websites and
+          working on complex problems, I discovered my passion for software
+          development. My "Aha!" moment came when I realized that I could
+          finally bring all of my ideas to life.
         </p>
       </motion.div>
     </motion.div>

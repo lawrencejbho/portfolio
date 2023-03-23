@@ -42,7 +42,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-start">
+      <section id="portfolio" className="snap-start">
         <Projects projects={projects} />
       </section>
 
@@ -66,10 +66,14 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  function swapIndexes(array) {
-    let tmp = array.pop();
-    array.unshift(tmp);
-    [array[1], array[2]] = [array[2], array[1]];
+  // this is the best way to swap the indexes of the projects.  Using pop,push, shift, unshift results in errors.
+  function swap(array) {
+    [array[0], array[1], array[2], array[3]] = [
+      array[1],
+      array[3],
+      array[0],
+      array[2],
+    ];
     return array;
   }
 
@@ -78,7 +82,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const projects = await fetchProjects();
   const socials = await fetchSocials();
 
-  swapIndexes(projects);
+  swap(projects);
 
   return {
     props: {
