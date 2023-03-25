@@ -40,7 +40,7 @@ export default function ProjectCard({ project, index }: Props) {
 
       <div className="items-center justify-center space-y-10 px-0">
         <div className="flex-col items-center text-center md:flex md:justify-between">
-          <h1 className="text-2xl font-bold text-black md:text-4xl">
+          <h1 className="text-2xl font-bold text-black dark:text-white md:text-4xl">
             {project?.title}
           </h1>
           <div className="my-2 flex justify-center space-x-2">
@@ -56,7 +56,7 @@ export default function ProjectCard({ project, index }: Props) {
             ))}
           </div>
         </div>
-        <p className="py-2 text-sm  text-gray-500 md:py-5 md:text-lg">
+        <p className="py-2 text-sm  text-gray-500 dark:text-white md:py-5 md:text-lg">
           {project?.summary}
         </p>
       </div>

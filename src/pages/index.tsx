@@ -27,32 +27,47 @@ type Props = {
 
 const Home = ({ pageInfo, projects, skills, socials }: Props) => {
   return (
-    <div className="scroll z-0 h-screen snap-y  overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4]">
-      <Header socials={socials} />
+    <div
+      id="main"
+      className="scroll z-0 h-screen snap-y overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4] dark:bg-[#0B111E] "
+    >
+      <Header socials={socials} classname="dark:bg-[#0B111E] " />
 
-      <section id="hero" className="snap-start">
+      <section
+        id="hero"
+        className="snap-start dark:bg-[#0B111E] dark:text-white"
+      >
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section
+        id="about"
+        className=" snap-center dark:bg-[#0B111E] dark:text-white"
+      >
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="skills" className="snap-start">
+      <section id="skills" className="snap-start dark:bg-[#0B111E]">
         <Skills skills={skills} />
       </section>
 
-      <section id="portfolio" className="snap-start">
+      <section
+        id="portfolio"
+        className="snap-start dark:bg-[#0B111E] dark:text-white"
+      >
         <Projects projects={projects} />
       </section>
 
-      <section id="contact" className="snap-center">
+      <section
+        id="contact"
+        className="snap-center dark:bg-[#0B111E] dark:text-white"
+      >
         <Contact />
       </section>
 
-      <footer className="sticky bottom-5 z-50 w-full">
-        <div className=" flex items-center justify-center">
-          <div className=" flex h-9 w-9 items-center justify-center rounded-full bg-[#4682B4]">
+      <footer className="sticky bottom-5 z-50 w-full dark:bg-[#0B111E]">
+        <div className=" flex items-center justify-center ">
+          <div className=" flex h-9 w-9 items-center justify-center rounded-full bg-[#4682B4] ">
             <a href="#hero">
               <HomeIcon className=" w-17  h-7 cursor-pointer border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
             </a>

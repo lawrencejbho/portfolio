@@ -8,7 +8,7 @@ import { urlFor } from "../../sanity";
 
 import AboutPic from "../../public/about.jpg";
 
-import Arrow from "../../public/right-arrow.png";
+import { BsArrowRight } from "react-icons/bs";
 
 type Props = {
   pageInfo: PageInfo;
@@ -23,7 +23,7 @@ function About({ pageInfo, experiences }: Props) {
       whileInView={{ opacity: 1 }}
       className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
-      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 sm:visible">
+      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200 sm:visible">
         About
       </h3>
 
@@ -54,7 +54,7 @@ function About({ pageInfo, experiences }: Props) {
       >
         <h4 className="flex justify-center space-x-3 font-semibold sm:text-2xl">
           <span> Systems Engineer</span>
-          <Image src={Arrow} className="w-8 sm:mt-[.11rem] " />
+          <BsArrowRight className="mt-1.5" />
           <span className="underline decoration-[#4682B4]">
             Software Engineer
           </span>

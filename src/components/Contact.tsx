@@ -24,15 +24,15 @@ function Contact({}: Props) {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.2 }}
       whileInView={{ opacity: 1 }}
-      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center dark:bg-[#0B111E] md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200">
         Contact
       </h3>
 
       <div className="flex flex-col space-y-10">
         <h4 className="text-center text-3xl font-semibold">
-          <span className="text-gray-800 ">Say Hello!</span>
+          <span className="text-gray-800 dark:text-white">Say Hello!</span>
         </h4>
 
         <div className="space-y-10">
@@ -52,9 +52,9 @@ function Contact({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mx-auto flex w-fit flex-col space-y-2"
+          className="mx-auto flex w-fit flex-col space-y-2 "
         >
-          <div className="flex">
+          <div className="flex ">
             <input
               {...register("name")}
               placeholder="Name"
@@ -78,7 +78,7 @@ function Contact({}: Props) {
           <textarea
             {...register("message")}
             placeholder="Message"
-            className="contactInput"
+            className="contactInput "
           />
           <button
             type="submit"

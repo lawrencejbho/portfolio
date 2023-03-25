@@ -37,22 +37,28 @@ function Hero({ pageInfo }: Props) {
       />
 
       <div className="z-20">
-        <h2 className="px-2 pb-2 text-sm uppercase tracking-[15px] text-gray-500 ">
+        <h2 className="px-2 pb-2 text-sm uppercase tracking-[15px] text-gray-500 dark:text-gray-200">
           {pageInfo?.role}
         </h2>
         <h1 className="px-8 text-5xl font-semibold md:mt-4 lg:text-6xl">
-          <span className="mr-3 text-gray-800">{text}</span>
+          <span className="mr-3 text-gray-800 dark:text-white">{text}</span>
           <Cursor cursorColor="#4682B4" />
         </h1>
-        <div className="mt-4">
+        <div className="mt-4 ">
           <a href="#about">
-            <button className="heroButton">About</button>
+            <button className="heroButton dark:hover:border-1 dark:border-[#0B111E] dark:text-white dark:hover:border-[#4682B4] dark:hover:text-[#4682B4]">
+              About
+            </button>
           </a>
           <a href="#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton dark:hover:border-1 dark:border-[#0B111E] dark:text-white dark:hover:border-[#4682B4] dark:hover:text-[#4682B4]">
+              Skills
+            </button>
           </a>
           <a href="#portfolio">
-            <button className="heroButton">Portfolio</button>
+            <button className="heroButton dark:hover:border-1 dark:border-[#0B111E] dark:text-white dark:hover:border-[#4682B4] dark:hover:text-[#4682B4]">
+              Portfolio
+            </button>
           </a>
         </div>
       </div>
