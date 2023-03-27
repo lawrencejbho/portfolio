@@ -4,6 +4,9 @@ import { useEffect } from "react";
 export default function useColorMode() {
   const [colorMode, setColorMode] = useLocalStorage("color-mode", "light");
 
+  // Grab the main element and add/remove dark class
+  //*  type checking is because of Next.js giving hydration errors because window doesn't exist on server side
+
   useEffect(() => {
     const className = "dark";
     const bodyClasses =
