@@ -18,7 +18,7 @@ function Header({ socials }: Props) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <header className="sticky top-0 z-30 mx-auto flex max-w-7xl items-start justify-between p-5 dark:bg-[#0B111E] xl:items-center">
+    <header className="sticky top-0 z-40 mx-auto flex max-w-7xl items-start justify-between overflow-auto fill-zinc-400 p-5 dark:bg-transparent  xl:items-center">
       <motion.div
         className=" flex flex-row items-center space-x-4"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -26,18 +26,18 @@ function Header({ socials }: Props) {
         transition={{ duration: 1 }}
       >
         <Link href="https://www.linkedin.com/in/lawrencejbho/" target="_blank">
-          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
+          <div className="delay-50 group  flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
             <FaLinkedin className=" text-gray-700 group-hover:text-white dark:text-[#4682B4] dark:group-hover:text-white" />
           </div>
         </Link>
         <Link href="https://twitter.com/_LawrenceHo" target="_blank">
-          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
+          <div className="delay-50 group  flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
             <FaTwitter className=" text-gray-700 group-hover:text-white dark:text-[#4682B4] dark:group-hover:text-white" />
           </div>
         </Link>
         <Link href="https://github.com/lawrencejbho" target="_blank">
-          <div className="delay-50 group flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
-            <FaGithub className=" text-gray-700 group-hover:text-white dark:text-[#4682B4] dark:group-hover:text-white" />
+          <div className="delay-50 group  flex h-8 w-8 items-center justify-center rounded-md border-0 bg-white drop-shadow-md transition duration-300 ease-in-out hover:bg-[#4682B4] dark:bg-[#111A2E] dark:hover:bg-[#4682B4]">
+            <FaGithub className="  text-gray-700 group-hover:text-white dark:text-[#4682B4] dark:group-hover:text-white" />
           </div>
         </Link>
       </motion.div>
@@ -55,16 +55,16 @@ function Header({ socials }: Props) {
           url="/#contact"
         /> */}
 
-        <div className="flex items-center justify-center space-x-3">
+        <div className=" flex  items-center justify-center space-x-3">
           {colorMode === "dark" ? (
-            <BiMoon
+            <BiSun
               onClick={() =>
                 setColorMode(colorMode === "dark" ? "light" : "dark")
               }
               className="mt-[.3rem] cursor-pointer text-xl text-gray-700 hover:text-[#4682B4] dark:text-white dark:hover:text-[#4682B4]"
             />
           ) : (
-            <BiSun
+            <BiMoon
               onClick={() =>
                 setColorMode(colorMode === "dark" ? "light" : "dark")
               }
@@ -73,7 +73,7 @@ function Header({ socials }: Props) {
           )}
 
           <a href="#contact">
-            <div className="group flex items-center justify-center space-x-2 pt-2 pr-4 transition duration-300 ease-in-out ">
+            <div className="group  flex items-center justify-center space-x-2 pt-2 pr-4 transition duration-300 ease-in-out ">
               <HiOutlineMail className="text-2xl text-gray-700 group-hover:text-[#4682B4] dark:text-white" />
 
               <div className="hidden text-sm font-medium uppercase text-gray-700 group-hover:text-[#4682B4] dark:text-white md:inline-flex">

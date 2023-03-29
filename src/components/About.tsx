@@ -23,7 +23,7 @@ function About({ pageInfo, experiences }: Props) {
       whileInView={{ opacity: 1 }}
       className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
-      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200 sm:visible">
+      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200 sm:visible h1:invisible h2:invisible h3:visible">
         About
       </h3>
 
@@ -60,7 +60,7 @@ function About({ pageInfo, experiences }: Props) {
           </span>
         </h4>
 
-        <p className="text-xs md:text-sm  xl:text-base ">
+        <p className="text-xs  md:h2:text-sm xl:h3:text-base ">
           Hello! 👋🏼 I'm a Full Stack Software Engineer based in San Francisco.
           I'm passionate about learning new things, solving complex problems,
           and creating amazing digital experiences. In 2022, I decided to pursue
@@ -71,7 +71,7 @@ function About({ pageInfo, experiences }: Props) {
           business decisions. In my free time I like to stay fit, teach my cats
           new tricks, and play guitar.
         </p>
-        <p className="text-xs md:text-sm  xl:text-base ">
+        <p className="text-xs  md:h2:text-sm xl:h3:text-base ">
           My path into software engineering is a non-conventional one. Before
           jumping in, I was a high performing cybersecurity and computer
           networking pre-sales Systems Engineer with 9 years of experience in

@@ -18,7 +18,6 @@ function LinkButton({ image, text, link }: Props) {
   return (
     <div className="relative w-[calc(100%_-_4rem)]">
       <div className="absolute z-[-1] mt-2 ml-2 inline-block h-full w-full  bg-black" />
-
       <Link
         href={link}
         target="_blank"

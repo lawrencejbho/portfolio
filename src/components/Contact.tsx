@@ -26,33 +26,33 @@ function Contact({}: Props) {
       whileInView={{ opacity: 1 }}
       className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center dark:bg-[#0B111E] md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200">
+      <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200 h1:invisible h2:invisible h3:visible">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-center text-3xl font-semibold">
+      <div className="flex flex-col space-y-4 h2:space-y-10">
+        <h4 className="text-center text-xl font-semibold h2:text-3xl">
           <span className="text-gray-800 dark:text-white">Say Hello!</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-4 h2:space-y-10">
           <div className="flex items-center space-x-5">
             <PhoneIcon className="h-7 w-7  text-[#4682B4]/90" />
-            <p className="text-2xl">+1 510 847 7378</p>
+            <p className="text-base h2:text-2xl">+1 510 847 7378</p>
           </div>
           <div className="flex items-center space-x-5">
             <EnvelopeIcon className="h-7 w-7 text-[#4682B4]/90" />
-            <p className="text-2xl">lawrence.jb.ho@gmail.com</p>
+            <p className="text-base h2:text-2xl">lawrence.jb.ho@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5">
             <MapPinIcon className="h-7 w-7  text-[#4682B4]/90" />
-            <p className="text-2xl">San Francisco, CA</p>
+            <p className="text-base h2:text-2xl">San Francisco, CA</p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mx-auto flex w-fit flex-col space-y-2 "
+          className="mx-auto mr-2 flex w-fit flex-col space-y-2"
         >
           <div className="flex ">
             <input

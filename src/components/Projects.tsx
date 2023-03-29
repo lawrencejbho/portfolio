@@ -60,7 +60,7 @@ export default function Project2({ projects }: Props) {
         //   exit={{ opacity: 0 }}
         className="relative mx-auto flex h-5/6 max-w-full flex-row items-center justify-evenly overflow-hidden text-left"
       >
-        <h3 className="absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200">
+        <h3 className="invisible absolute top-24 ml-10 text-2xl uppercase tracking-[20px] text-gray-500 dark:text-gray-200 h1:invisible h2:invisible h3:visible">
           Portfolio
         </h3>
 
@@ -79,7 +79,7 @@ export default function Project2({ projects }: Props) {
           onClick={slideIntoViewRight}
           className=" invisible absolute right-0 z-40 mr-10 w-10 cursor-pointer opacity-50 hover:text-[#4682B4] hover:opacity-100 hover:transition sm:visible md:mr-20  xl:mr-32 "
         />
-        <div className="absolute bottom-20 z-40 flex items-center justify-center space-x-5">
+        <div className="absolute bottom-16 z-40 flex items-center justify-center space-x-5 h3:bottom-20">
           {projects?.map((project, index) => (
             <NavButton
               value={index + 1}

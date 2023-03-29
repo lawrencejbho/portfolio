@@ -33,21 +33,21 @@ export default function ProjectCard({ project, index }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         // viewport={{ once: true }}
-        className="radius-sm w-full object-center lg:w-[75%] xl:w-[900px] "
+        className="radius-sm w-full max-w-[900px] object-center md:h1:h-3/4 md:h1:w-5/6 lg:h2:w-[750px] xl:h3:w-[900px]"
         src={urlFor(project?.image)}
         alt=""
       />
 
-      <div className="items-center justify-center space-y-10 px-0">
+      <div className="items-center justify-center space-y-4 px-0 h3:space-y-10">
         <div className="flex-col items-center text-center md:flex md:justify-between">
-          <h1 className="text-2xl font-bold text-black dark:text-white md:text-4xl">
+          <h1 className="text-2xl font-bold text-black dark:text-white md:h3:text-4xl">
             {project?.title}
           </h1>
           <div className="my-2 flex justify-center space-x-2">
             {project?.technologies.map((technology) => (
               <Image
                 key={technology._id}
-                className="h-10 w-10"
+                className="h-8 w-8 h2:h-10 h2:w-10"
                 src={urlFor(technology.image)}
                 width="500"
                 height="500"
@@ -56,7 +56,7 @@ export default function ProjectCard({ project, index }: Props) {
             ))}
           </div>
         </div>
-        <p className="py-2 text-sm  text-gray-500 dark:text-white md:py-5 md:text-lg">
+        <p className="max-w-[900px] text-sm text-gray-500 dark:text-white sm:h2:text-base h3:py-2 md:h3:text-lg ">
           {project?.summary}
         </p>
       </div>
@@ -64,22 +64,24 @@ export default function ProjectCard({ project, index }: Props) {
         <a href={demoLinks[index]} target="_blank">
           <button
             type="button"
-            className="break-inside w-42 mr-4 mb-4 flex rounded-3xl bg-sky-900 px-4 py-2 "
+            className="break-inside w-42 mr-4 mb-4 flex rounded-3xl bg-sky-900 px-4 py-2"
           >
             <div className="flex flex-1 items-center justify-between text-white hover:text-gray-300">
-              <span className="text-lg font-medium ">Live Demo</span>
-              <ArrowRightIcon className="ml-4  w-6" />
+              <span className="text-sm font-medium md:h4:text-lg">
+                Live Demo
+              </span>
+              <ArrowRightIcon className="ml-2 w-4 md:h4:ml-4 md:h4:w-6" />
             </div>
           </button>
         </a>
         <a href={githubLinks[index]} target="_blank">
           <button
             type="button"
-            className="break-inside w-42 mb-4 flex rounded-3xl bg-black px-4 py-2 "
+            className="break-inside w-42 mb-4 flex  rounded-3xl bg-black px-4 py-2"
           >
             <div className="flex flex-1 content-center items-center justify-between text-center text-white hover:text-gray-300">
-              <span className=" text-lg font-medium ">Github</span>
-              <ArrowRightIcon className="ml-4 w-6" />
+              <span className=" text-sm font-medium md:h4:text-lg">Github</span>
+              <ArrowRightIcon className="ml-2 w-4  md:h4:ml-4 md:h4:w-6" />
             </div>
           </button>
         </a>

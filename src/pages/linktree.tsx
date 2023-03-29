@@ -23,7 +23,7 @@ function linktree({}: Props) {
 
   return (
     <div>
-      <div className="flex h-[100vh] justify-center bg-gradient-to-t from-blue-300 to-transparent">
+      <div className=" flex h-[100vh] justify-center bg-gradient-to-t from-blue-300 to-transparent">
         <div className="w-full max-w-[700px]">
           <div className="mt-8 flex w-[calc(100%_-_2rem)] justify-end">
             <IoShareOutline
