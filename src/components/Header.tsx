@@ -18,7 +18,7 @@ function Header({ socials }: Props) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <header className="sticky top-0 z-40 mx-auto flex max-w-7xl items-start justify-between overflow-auto fill-zinc-400 p-5 dark:bg-transparent  xl:items-center">
+    <header className="top-0 z-40 mx-auto flex w-[100%] max-w-7xl items-start justify-between  fill-zinc-400 p-5 dark:bg-transparent  xl:items-center">
       <motion.div
         className=" flex flex-row items-center space-x-4"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -47,15 +47,7 @@ function Header({ socials }: Props) {
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-          url="/#contact"
-        /> */}
-
-        <div className=" flex  items-center justify-center space-x-3">
+        <div className="flex items-center justify-end space-x-3">
           {colorMode === "dark" ? (
             <BiSun
               onClick={() =>
