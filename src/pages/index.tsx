@@ -71,7 +71,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
         <div className=" flex items-center justify-center ">
           <div className=" flex h-9 w-9 items-center justify-center  rounded-full bg-[#4682B4]">
             <a href="#hero">
-              <HomeIcon className=" w-17  h-7 cursor-pointer border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
+              <HomeIcon className=" w-17 delay-50  h-7 cursor-pointer border-blue-300 pb-0.5 text-white brightness-75 hover:brightness-100" />
             </a>
           </div>
         </div>
