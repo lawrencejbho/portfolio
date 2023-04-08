@@ -31,7 +31,7 @@ const Home = ({ pageInfo, projects, skills, socials }: Props) => {
       id="main"
       className="scroll z-0 h-screen snap-y  overflow-y-scroll scroll-smooth bg-[#fafafa] text-black scrollbar overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#4682B4] dark:bg-[#0B111E] "
     >
-      <div className="absolute w-full overflow-x-hidden">
+      <div className="absolute z-50 w-full overflow-x-hidden">
         <Header socials={socials} className="dark:bg-[#0B111E]" />
       </div>
       <div>

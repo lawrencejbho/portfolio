@@ -18,7 +18,7 @@ function Header({ socials }: Props) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <header className="top-0 z-40 mx-auto flex w-[100%] max-w-7xl items-start justify-between  fill-zinc-400 p-5 dark:bg-transparent  xl:items-center">
+    <header className="top-0 mx-auto flex  max-w-7xl items-start justify-between  fill-zinc-400 p-5 dark:bg-transparent  xl:items-center">
       <motion.div
         className=" flex flex-row items-center space-x-4"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
