@@ -53,43 +53,27 @@ function About({ pageInfo, experiences }: Props) {
         className=" mb-10 w-full space-y-4 px-0 sm:space-y-8 md:px-10 md:pt-14"
       >
         <h4 className="flex justify-center space-x-3 font-semibold sm:text-2xl">
-          <span> Systems Engineer</span>
-          <BsArrowRight className="mt-1.5" />
+          {/* <BsArrowRight className="mt-1.5" /> */}
           <span className="underline decoration-[#4682B4]">
-            Software Engineer
+            Solutions Engineer
           </span>
         </h4>
 
         <p className="text-xs  md:h2:text-sm xl:h3:text-base ">
-          Hello! 👋🏼 I'm a Full Stack Software Engineer based in San Francisco.
-          I'm passionate about learning new things, solving complex problems,
-          and creating amazing digital experiences. In 2022, I decided to pursue
-          sotware engineering full time and have since created four major
-          projects on my own. Currently, I'm working with a small business in
-          San Francisco as a Software Engineer to integrate and ETL their
-          payment processing data to increase operational efficiency and drive
-          business decisions. In my free time I like to stay fit, teach my cats
-          new tricks, and play guitar.
+          Hello! 👋🏼 I'm a California native that grew up in San Diego and is
+          currently based in San Francisco. As a Solution Engineer, I approach
+          each project as a unique challenge to be solved with a blend of
+          creativity, technical expertise, and impactful soft skills. I excel in
+          working closely with multiple teams and stakeholders to understand
+          design requirements, create sophisticated yet easy to use solutions,
+          and effectively communicate concepts to both technical and
+          non-technical audiences. I've worked in technical pre sales
+          engineering for four years and I have 9+ years of experience working
+          in the cybersecurity and computer networking industries. My portfolio
+          highlights my software development projects and technical tools used.
+          In my free time I like to stay fit, watch the Lakers, and play guitar.
         </p>
-        <p className="text-xs  md:h2:text-sm xl:h3:text-base ">
-          My path into software engineering is a non-conventional one. Before
-          jumping in, I was a high performing cybersecurity and computer
-          networking pre-sales Systems Engineer with 9 years of experience in
-          the industry. After many years of working with product, sales, and
-          customers, I continuously ran into a familiar mental road block. A lot
-          of days I would think to myself, "Wouldn't it be nice if I could code
-          up a feature really quickly" to help build a compelling demo for a
-          prospective client. Or "If only I could write an appliation to help
-          accelerate some of our sales initiatives" by using empirical data
-          versus anecdotally reviewing our wins and losses on a quarterly basis.
-          I felt like my abilities were limited by my own toolbox and the skill
-          I was missing was being able to build. I decided to use my nights and
-          weekends during the pandemic to learn to code in Python & Javascript.
-          After a year of diving into Web Development by building websites and
-          working on complex problems, I discovered my passion for software
-          development. My "Aha!" moment came when I realized that I could
-          finally bring all of my ideas to life.
-        </p>
+        <p className="text-xs  md:h2:text-sm xl:h3:text-base "></p>
       </motion.div>
     </motion.div>
   );
